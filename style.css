@@ -14,3 +14,14 @@ body {
     var(--endGradient)
   );
 }
+
+.main-title {
+  font-size: 85px;
+  line-height: 84px;
+  width: 730px;
+  margin: 40px auto;
+}
+
+.title {
+  font-size: 35px;
+}

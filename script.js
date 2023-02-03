@@ -9,6 +9,8 @@ function setGradient() {
   rootCss.style.setProperty("--beginGradient", firstColorInput.value);
   rootCss.style.setProperty("--endGradient", secondColorInput.value);
   typeGradientProperties();
+  copyBtn.style.visibility = "visible";
+  changeTooltipText("Copy to clipboard");
 }
 
 function typeGradientProperties() {
@@ -20,6 +22,11 @@ function typeGradientProperties() {
     .slice(0, indexOfRepeat);
 }
 
+function changeTooltipText(text) {
+  const tooltip = document.getElementById("myTooltip");
+  tooltip.textContent = text;
+}
+
 firstColorInput.addEventListener("input", setGradient);
 
 secondColorInput.addEventListener("input", setGradient);
@@ -27,7 +34,6 @@ secondColorInput.addEventListener("input", setGradient);
 copyBtn.addEventListener("click", () => {
   if (gradientContainer.textContent) {
     navigator.clipboard.writeText(gradientContainer.textContent);
-    const tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copied";
+    changeTooltipText("Copied");
   }
 });

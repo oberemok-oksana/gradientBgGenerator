@@ -1,7 +1,16 @@
+:root {
+  --beginGradient: #4e63e6;
+  --endGradient: yellow;
+}
+
 body {
   font-family: "Itim", cursive;
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-  background: linear-gradient(to right, #4e63e6, yellow);
+  background: linear-gradient(
+    to right,
+    var(--beginGradient),
+    var(--endGradient)
+  );
 }

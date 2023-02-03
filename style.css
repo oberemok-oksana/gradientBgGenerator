@@ -25,3 +25,18 @@ body {
 .title {
   font-size: 35px;
 }
+
+.copy {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.copy-btn {
+  cursor: pointer;
+}
+
+.copy-btn:active {
+  transform: rotate(-45deg);
+}

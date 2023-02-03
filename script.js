@@ -7,7 +7,12 @@ const rootCss = document.querySelector(":root");
 function setGradient() {
   rootCss.style.setProperty("--beginGradient", firstColorInput.value);
   rootCss.style.setProperty("--endGradient", secondColorInput.value);
-  gradientContainer.textContent = body.style.background;
+  const indexOfRepeat = getComputedStyle(document.body)
+    .getPropertyValue("background")
+    .indexOf("repeat");
+  gradientContainer.textContent = getComputedStyle(document.body)
+    .getPropertyValue("background")
+    .slice(0, indexOfRepeat);
 }
 
 firstColorInput.addEventListener("input", setGradient);

@@ -3,4 +3,5 @@ body {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
+  background: linear-gradient(to right, #4e63e6, yellow);
 }
